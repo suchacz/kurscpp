@@ -3,14 +3,19 @@
 bool czy_pierwsza (int a) {
     if (a == 1)
         return false;
+    if (n == 2)
+        return true;
+    if (n % 2 == 0)
+        return false;
     
-    for (int i = 2; i < a; i += 1) {
+    for (int i = 3; i < a; i += 2) {
         if (a % i == 0) {
             return false;
         }
     }
      return true;
 }
+
 
 
 int main () {
