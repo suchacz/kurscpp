@@ -1,13 +1,11 @@
 #include <iostream>
 
 int silnia (int n) {
-    int iloczyn = 1;
-    for (int a = 1; a <= n; a += 1) {
-        iloczyn *= a;
-    }
-         
-return iloczyn;
+    if (n == 0)
+        return 1;
+    return n * silnia(n - 1);
 }
+         
 
 
 int main () {
