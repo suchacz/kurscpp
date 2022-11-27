@@ -11,9 +11,8 @@
 #include <cmath>
 
 int rownanie_kwadratowe(double a, double b, double c, double* rozw1, double* rozw2) {
-    int sqrt = std::sqrt
     if (a != 0.0) {
-        *rozw1 = - ((std::sqrt(b * b - 4 * a * c) + b) / 2 * a);
+        *rozw1 = - ((std::sqrt (b * b - 4 * a * c) + b) / 2 * a);
         *rozw2 = (std::sqrt(b * b - 4 * a * c) - b) / 2 * a;
         return 2;
     }
@@ -31,9 +30,9 @@ int rownanie_kwadratowe(double a, double b, double c, double* rozw1, double* roz
 
 int main () {
 
-    double a = 0.0;
-    double b = 0.0;
-    double c = 0.0;
+    double a = 10.0;
+    double b = 5.0;
+    double c = 10.0;
     double x = 0.0;
     double y = 0.0;
 
