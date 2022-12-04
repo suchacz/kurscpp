@@ -1,9 +1,11 @@
 #include <iostream>
 
 struct Ulamek {
+private:
     int licznik;
     int mianownik;
-    
+
+public:    
     void wypisz() const {
         std::cout << licznik << '/' << mianownik << '\n';
     }
@@ -20,15 +22,27 @@ struct Ulamek {
     Ulamek c{licznik * b.licznik, mianownik * b.mianownik};
     return c;
     }
+    
+    //getter
+    int getMianownik() const {
+        return mianownik;
+    }
+    
+    //setter
+    void setMianownik(int x) {
+        if (x == 0)
+            x = 1;
+        mianownik = x;
+    }
+    
 };
 
 int main () {
     Ulamek a{2, 0};
-    
-    Ulamek b{2, 3};
-
-    Ulamek c = a.mnoz(b);
+//     a.mianownik = 0;
     a.wypisz();
-    b.wypisz();
-    c.wypisz();
+    std::cout << "Mianownik = " << a.getMianownik() <<'\n';
+    a.setMianownik(5);
+    a.wypisz();
+   
 }
