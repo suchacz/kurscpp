@@ -7,8 +7,9 @@
 #include <iostream>
 
 void swap(int* a, int* b){
-    this-> a = b;
-    this-> b = a;
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main () {
